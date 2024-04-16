@@ -1,0 +1,152 @@
+.Calculator {
+  width: auto;
+  height: auto;
+  background-color: #ffffff;
+  display: flex;
+  overflow: hidden;
+  margin: 30px 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.Calculator form {
+  width: 600px;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 30px;
+  background-color: #fff;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Calculator h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.Calculator label {
+  display: block;
+  color: #555;
+  font-size: 20px;
+}
+
+.Calculator input {
+  height: 30px;
+  width: auto;
+  margin: 5px 5px;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 18px;
+  background-color: #f2f2f2;
+  border: none;
+}
+
+.Calculator .defaultValue {
+  width: 65px;
+  text-align: center;
+}
+
+.Calculator button {
+  height: auto;
+  width: auto;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 10px;
+  font-size: 24px;
+  background-color: #4caf50;
+  border-style: none;
+  transition: 0.3s linear;
+  cursor: pointer;
+  color: #fff;
+}
+
+.Calculator button:hover {
+  background-color: #3e8e41;
+}
+
+.Calculator p {
+  padding-top: 17px;
+  font-size: 24px;
+  color: #555;
+}
+
+.Calculator .error {
+  font-size: 16px;
+}
+
+.Calculator .сalculation {
+  width: 400px;
+  border: 1px solid black;
+  background-color: #fff;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 50px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Calculator .result {
+  color: #4caf50;
+  font-weight: bold;
+}
+
+@media (max-width: 576px) {
+  .Calculator {
+    flex-direction: column;
+  }
+
+  .Calculator h1 {
+    font-size: 18px;
+  }
+
+  .Calculator form {
+    width: auto;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: none;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Calculator label {
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .Calculator input {
+    width: 70%;
+  }
+
+  .Calculator .defaultValue {
+    width: 70%;
+    text-align: center;
+  }
+
+  .Calculator button {
+    height: auto;
+    width: 100px;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .Calculator .сalculation {
+    width: auto;
+    border: 1px solid black;
+    background-color: #fff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 0px;
+  }
+}

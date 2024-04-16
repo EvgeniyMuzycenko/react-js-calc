@@ -1,0 +1,50 @@
+.Registration {
+  display: flex;
+  flex-direction: column;
+  margin: 5% 15%;
+}
+
+.Registration h1 {
+  margin-bottom: 20px;
+}
+
+.Registration input {
+  height: 30px;
+  width: auto;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.Registration button {
+  height: 30px;
+  width: auto;
+  padding: 0px 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  background-color: #4caf50;
+  border-style: none;
+  transition: 0.3s linear;
+  color: #fff;
+}
+
+.Registration button:hover {
+  background-color: #3e8e41;
+}
+
+.Registration #loginError {
+  color: red;
+  margin-top: 10px;
+}
+
+.Registration .btn-close {
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 26px;
+  transition: 0.3s linear;
+}
+
+.Registration .btn-close:hover {
+  color: #ff0000;
+}

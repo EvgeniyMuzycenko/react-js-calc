@@ -1,0 +1,36 @@
+.СalculationBox {
+  width: auto;
+  height: auto;
+  padding: 10px 30px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+  overflow: hidden;
+  margin: 30px 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.СalculationBox .BtnSendMail {
+  height: auto;
+  width: 200px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: #4caf50;
+  border-style: none;
+  transition: 0.3s linear;
+  cursor: pointer;
+  color: #fff;
+}
+
+.Calculation button:hover {
+  background-color: #3e8e41;
+}
+
+.СalculationBox span {
+  color: #4caf50;
+  font-weight: bold;
+}

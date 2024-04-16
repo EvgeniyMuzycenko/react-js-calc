@@ -1,0 +1,55 @@
+.AddCalculatorBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.AddCalculatorBox p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.AddCalculatorBox input {
+  height: 30px;
+  width: 90%;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.AddCalculatorBox button {
+  height: auto;
+  width: auto;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: #fff;
+  border-style: none;
+  transition: 0.3s linear;
+}
+
+.AddCalculatorBox button:hover {
+  background-color: #3e8e41;
+}
+
+.AddCalculatorBox #addProductError {
+  color: red;
+  margin-top: 10px;
+}
+
+.AddCalculatorBox .btn-close {
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 26px;
+  transition: 0.3s linear;
+}
+
+.AddCalculatorBox .btn-close:hover {
+  color: #ff0000;
+}
+
+.AddCalculatorBox .error {
+  margin-top: 15px;
+}
