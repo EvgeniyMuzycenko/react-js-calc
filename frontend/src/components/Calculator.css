@@ -14,19 +14,25 @@
   border-top: 1px solid black;
   border-left: 1px solid black;
   border-bottom: 1px solid black;
-  padding: 30px;
+  padding: 50px;
   background-color: #fff;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  text-align: left;
 }
 
 .Calculator h1 {
   font-size: 28px;
   margin-bottom: 20px;
   color: #333;
+}
+
+.Calculator h1::before {
+  content: "|";
+  margin-right: 10px;
+  color: #4caf50;
 }
 
 .Calculator label {
@@ -36,25 +42,30 @@
 }
 
 .Calculator input {
-  height: 30px;
+  height: 50px;
   width: auto;
   margin: 5px 5px;
   border-radius: 10px;
   padding: 10px;
-  font-size: 18px;
+  font-size: 19px;
   background-color: #f2f2f2;
   border: none;
 }
 
-.Calculator .defaultValue {
-  width: 65px;
+.Calculator .interestValue {
+  width: 100px;
   text-align: center;
+}
+
+.Calculator .termValue {
+  width: 250px;
+  text-align: start;
 }
 
 .Calculator button {
   height: auto;
   width: auto;
-  padding: 15px;
+  padding: 15px 15px;
   margin-top: 20px;
   border-radius: 10px;
   font-size: 24px;
@@ -70,7 +81,7 @@
 }
 
 .Calculator p {
-  padding-top: 17px;
+  padding-top: 28px;
   font-size: 24px;
   color: #555;
 }
@@ -88,7 +99,6 @@
   padding: 50px 30px;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .Calculator .result {
