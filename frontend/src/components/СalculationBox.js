@@ -115,7 +115,6 @@ function СalculationBox({ sum, downPayment, interestRate, loanTerm, monthlyPaym
           <p><b>Ежемесячный платеж:</b> <span>{monthlyPayment} руб.</span></p>
           <p><b>Необходимый доход:</b> <span>{requiredIncome} руб.</span></p>
           <p><b>Переплата:</b> <span>{overPayment} руб.</span></p>
-          <button>Экспорт в файл</button>
         </div>
       );
     } else {
@@ -128,7 +127,6 @@ function СalculationBox({ sum, downPayment, interestRate, loanTerm, monthlyPaym
           <p><b>Срок вклада:</b> <span>{loanTerm} {months}</span></p>
           <p><b>Доход:</b> <span>{incomeDeposit} руб.</span></p>
           <p><b>Доход с капитализацией:</b> <span>{capitalization} руб.</span></p>
-          <button>Экспорт в файл</button>
         </div>
       );
     }
