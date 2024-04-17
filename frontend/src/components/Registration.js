@@ -9,7 +9,7 @@ function Registration({ setModalBox, setMessage }) {
     const login = document.getElementById('login').value
     const password = document.getElementById('pass').value
     const name = document.getElementById('name').value
-    const role = "user"
+    const role = 'user'
 
     const validEmail = email.match(/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/g)
     const validLogin = login.match(/^[a-z0-9]+$/i)
@@ -48,7 +48,7 @@ function Registration({ setModalBox, setMessage }) {
   }
 
   return (
-    <div className="Registration">
+    <div className='Registration'>
       <form>
         <h1>Регистрация:</h1>
         <input id='email' placeholder='E-mail' type='email' required />

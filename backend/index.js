@@ -24,6 +24,7 @@ const generateAccessToken = (id, login, email, role, name) => {
 app.use(cors())
 app.use(express.json())
 
+
 //Регистрация
 app.post('/registration', async (req, res) => {
   console.log(req.body)

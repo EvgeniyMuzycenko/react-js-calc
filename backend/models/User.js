@@ -17,7 +17,7 @@ const User = new Schema({
   },
   role: {
     type: String,
-    unique: true
+    required: true
   },
   name: {
     type: String,

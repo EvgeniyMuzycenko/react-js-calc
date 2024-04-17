@@ -32,9 +32,6 @@ function Calculator({ setModalBox, setMessage, id, type, status, interest_rate, 
     } else if (sum <= 0 || downPayment <= 0 || loanTerm <= 0) {
       setErrorFieldText('Значения полей должны быть положительными!')
       setTimeout(() => { setErrorFieldText('') }, 3000)
-    } else if (sum < downPayment) {
-      setErrorFieldText('Сумма кредита меньше первоначального взноса!')
-      setTimeout(() => { setErrorFieldText('') }, 3000)
     } else {
 
       const monthlyInterestRate = interest_rate / 12 / 100;
@@ -86,7 +83,7 @@ function Calculator({ setModalBox, setMessage, id, type, status, interest_rate, 
 
   //Сохранение расчета
   const saveCalculation = () => {
-    if (monthlyPayment !== 0 || requiredIncome !== 0 || overPayment !== 0) {
+    if (monthlyPayment !== 0 || incomeDeposit !== 0) {
 
       const saveData = {
         sum: sum,
@@ -124,7 +121,7 @@ function Calculator({ setModalBox, setMessage, id, type, status, interest_rate, 
         setModalBox('MessageBox')
       }, 100)
     } else {
-      setErrorSaveText('Расчет не произведен!')
+      setErrorSaveText('Ошибка сохранения!')
       setTimeout(() => { setErrorSaveText('') }, 3000)
     }
   }
