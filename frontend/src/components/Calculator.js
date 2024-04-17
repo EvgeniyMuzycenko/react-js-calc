@@ -178,29 +178,19 @@ function Calculator({ setModalBox, setMessage, id, type, status, interest_rate, 
         <div className="Calculator">
           <form>
             <h1>{name}</h1>
-            <label>
-              Сумма кредита:
-              <input type="number" min='0' max='100000000' value={sum}
-                onChange={(e) => setSum(e.target.value)} required /> руб.
+            <label>Сумма кредита:</label>
+            <input type="number" min='0' max='100000000' value={sum}
+              onChange={(e) => setSum(e.target.value)} placeholder='Введите сумму кредита в рублях' required />
+            <label>Первоначальный взнос:</label>
+            <input type="number" min='0' max='10000000' value={downPayment}
+              onChange={(e) => setDownPayment(e.target.value)} placeholder='Введите сумму первоначального взноса в рублях' required />
+            <label>Срок кредита:
+              <input type='number' className='termValue' min='0' max='100' value={loanTerm}
+                onChange={(e) => setLoanTerm(e.target.value)} placeholder='Введите срок кредита' required /> {years}
             </label>
-            <br />
-            <label>
-              Первоначальный взнос:
-              <input type="number" min='0' max='10000000' value={downPayment}
-                onChange={(e) => setDownPayment(e.target.value)} required /> руб.
+            <label>Процентная ставка:
+              <input type="text" className='interestValue' defaultValue={interest_rate} disabled /> %
             </label>
-            <br />
-            <label>
-              Процентная ставка:
-              <input type="text" className='defaultValue' defaultValue={interest_rate} /> %
-            </label>
-            <br />
-            <label>
-              Срок кредита:
-              <input type='number' min='0' max='100' value={loanTerm}
-                onChange={(e) => setLoanTerm(e.target.value)} required /> {years}
-            </label>
-            <br />
             <button type='button' onClick={calculateLoan}>Рассчитать</button>
             <p className='error'>{errorFieldText}</p>
           </form>
@@ -238,23 +228,18 @@ function Calculator({ setModalBox, setMessage, id, type, status, interest_rate, 
         <div className="Calculator">
           <form>
             <h1>{name}</h1>
-            <label>
-              Сумма вклада:
-              <input type="number" min='0' max='100000000' value={sum}
-                onChange={(e) => setSum(e.target.value)} required /> руб.
-            </label>
-            <br />
-            <label>
-              Процентная ставка:
-              <input type="text" className='defaultValue' defaultValue={interest_rate} /> %
-            </label>
-            <br />
+            <label>Сумма вклада:</label>
+            <input type="number" min='0' max='100000000' value={sum}
+              onChange={(e) => setSum(e.target.value)} placeholder='Введите сумму вклада в рублях' required />
             <label>
               Срок вклада:
-              <input type="number" min='0' max='100' value={loanTerm}
-                onChange={(e) => setLoanTerm(e.target.value)} required /> {months}
+              <input type="number" className='termValue' min='0' max='100' value={loanTerm}
+                onChange={(e) => setLoanTerm(e.target.value)} placeholder='Введите срок вклада' required /> {months}
             </label>
-            <br />
+            <label>
+              Процентная ставка:
+              <input type="text" className='interestValue' defaultValue={interest_rate} /> %
+            </label>
             <button type="button" onClick={calculateDeposit}>Рассчитать</button>
             <p className='error'>{errorFieldText}</p>
           </form>
