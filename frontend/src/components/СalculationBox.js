@@ -105,14 +105,15 @@ function СalculationBox({ sum, downPayment, interestRate, loanTerm, monthlyPaym
     if (type === 'кредит') {
       return (
         <div className="СalculationBox">
-          <p><b>Расчет от {date}</b></p>
+          <p><b>Расчет от:</b></p>
+          <p className='desc'>{date}</p>
           <p><b>Имя пользователя:</b></p>
           <p className='desc'>{name}</p>
           <p><b>Сумма кредита:</b></p>
           <p className='desc'>{sum} руб.</p>
           <p><b>Первоначальный взнос:</b></p>
           <p className='desc'>{downPayment} руб.</p>
-          <p><b>Ставка:</b></p>
+          <p><b>Процентная ставка:</b></p>
           <p className='desc'>{interestRate} %</p>
           <p><b>Срок кредита:</b></p>
           <p className='desc'>{loanTerm} {years}</p>
@@ -125,12 +126,13 @@ function СalculationBox({ sum, downPayment, interestRate, loanTerm, monthlyPaym
     } else {
       return (
         <div className="СalculationBox">
-          <p><b>Расчет от {date}</b></p>
+          <p><b>Расчет от:</b></p>
+          <p className='desc'>{date}</p>
           <p><b>Имя пользователя:</b></p>
           <p className='desc'>{name}</p>
           <p><b>Сумма вклада:</b></p>
           <p className='desc'>{sum} руб.</p>
-          <p><b>Ставка:</b></p>
+          <p><b>Процентная ставка:</b></p>
           <p className='desc'>{interestRate} %</p>
           <p><b>Срок вклада:</b></p>
           <p className='desc'>{loanTerm} {months}</p>
@@ -147,12 +149,13 @@ function СalculationBox({ sum, downPayment, interestRate, loanTerm, monthlyPaym
     if (type === 'кредит') {
       return (
         <div className="СalculationBox" >
-          <p><b>Расчет от {date}</b></p>
+          <p><b>Расчет от:</b></p>
+          <p className='desc'>{date}</p>
           <p><b>Сумма кредита:</b></p>
           <p className='desc'>{sum} руб.</p>
           <p><b>Первоначальный взнос:</b></p>
           <p className='desc'>{downPayment} руб.</p>
-          <p><b>Ставка:</b></p>
+          <p><b>Процентная ставка:</b></p>
           <p className='desc'>{interestRate} %</p>
           <p><b>Срок кредита:</b></p>
           <p className='desc'>{loanTerm} {years}</p>
@@ -168,10 +171,11 @@ function СalculationBox({ sum, downPayment, interestRate, loanTerm, monthlyPaym
     } else {
       return (
         <div className="СalculationBox">
-          <p><b>Расчет от {date}</b></p>
+          <p><b>Расчет от:</b></p>
+          <p className='desc'>{date}</p>
           <p><b>Сумма вклада:</b></p>
           <p className='desc'>{sum} руб.</p>
-          <p><b>Ставка:</b></p>
+          <p><b>Процентная ставка:</b></p>
           <p className='desc'>{interestRate} %</p>
           <p><b>Срок вклада:</b></p>
           <p className='desc'>{loanTerm} {months}</p>

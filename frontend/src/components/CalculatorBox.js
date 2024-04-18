@@ -55,9 +55,9 @@ function CalculatorBox({ id, type, status, interest_rate, name, setMessage, setM
       <div className="CalculatorBox">
         <p><b>Название:</b></p>
         <p className='desc'>{name}</p>
-        <p><b>Тип:</b></p>
+        <p><b>Тип калькулятора:</b></p>
         <p className='desc'>{type}</p>
-        <p><b>Ставка:</b></p>
+        <p><b>Процентная ставка:</b></p>
         <p className='desc'>{interest_rate} %</p>
         <p><b>Статус:</b></p>
         <p className='desc'>{isShow}</p>

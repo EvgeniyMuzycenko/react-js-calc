@@ -171,7 +171,7 @@ function Calculator({ setModalBox, setMessage, id, type, status, interest_rate, 
       return (
         <div className="Calculator">
           <form>
-            <h2>{name}</h2>
+            <span className='content'></span><h2>{name}</h2>
             <label>Сумма кредита:</label>
             <input type="number" min='0' max='100000000' value={sum}
               onChange={(e) => setSum(e.target.value)} placeholder='Введите сумму кредита' required />
@@ -233,6 +233,7 @@ function Calculator({ setModalBox, setMessage, id, type, status, interest_rate, 
           </form>
           <div className='сalculation'>
             <p className='resText'>Результат расчета:</p>
+            <p>Ваш доход</p>
             <p className='result'>{new Intl.NumberFormat('ru-RU', {
               style: 'currency',
               currency: 'RUB',

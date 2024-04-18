@@ -26,12 +26,6 @@
 .Calculator h2 {
   font-size: 28px;
   margin-bottom: 20px;
-  color: #333;
-}
-
-.Calculator h2::before {
-  content: "|";
-  margin-right: 10px;
   color: #4caf50;
 }
 
@@ -109,8 +103,12 @@
 
 .Calculator .resText {
   font-size: 28px;
-  color: #333;
+  color: #4caf50;
   padding-top: 20px;
+}
+
+.Calculator .authText {
+  font-size: 22px;
 }
 
 @media (max-width: 576px) {
