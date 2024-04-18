@@ -22,7 +22,6 @@ function Calculator({ setModalBox, setMessage, id, type, status, interest_rate, 
   const [loanTerm, setLoanTerm] = useState('');
   const [monthlyPayment, setMonthlyPayment] = useState(0);
   const [requiredIncome, setRequiredIncome] = useState(0);
-  const [overPayment, setOverPayment] = useState(0);
 
   //Расчет кредита
   const calculateLoan = () => {
@@ -51,10 +50,6 @@ function Calculator({ setModalBox, setMessage, id, type, status, interest_rate, 
       const requiredIncome = monthlyPayment * 2.5;
       setRequiredIncome(requiredIncome.toFixed(2));
       console.log(requiredIncome) //Необходимый доход 
-
-      const overPayment = monthlyPayment * loanTerm * 12 - creditAmount
-      setOverPayment(overPayment.toFixed(2))
-      console.log(overPayment) //Переплата
     }
   }
 
@@ -92,7 +87,6 @@ function Calculator({ setModalBox, setMessage, id, type, status, interest_rate, 
         loanTerm: loanTerm,
         monthlyPayment: monthlyPayment,
         requiredIncome: requiredIncome,
-        overPayment: overPayment,
         email: jwtDecode(token).email,
         name: jwtDecode(token).name,
         date: new Date().toLocaleString(),
@@ -121,7 +115,7 @@ function Calculator({ setModalBox, setMessage, id, type, status, interest_rate, 
         setModalBox('MessageBox')
       }, 100)
     } else {
-      setErrorSaveText('Ошибка сохранения!')
+      setErrorSaveText('Пустой расчет!')
       setTimeout(() => { setErrorSaveText('') }, 3000)
     }
   }
@@ -177,16 +171,16 @@ function Calculator({ setModalBox, setMessage, id, type, status, interest_rate, 
       return (
         <div className="Calculator">
           <form>
-            <h1>{name}</h1>
+            <h2>{name}</h2>
             <label>Сумма кредита:</label>
             <input type="number" min='0' max='100000000' value={sum}
-              onChange={(e) => setSum(e.target.value)} placeholder='Введите сумму кредита в рублях' required />
+              onChange={(e) => setSum(e.target.value)} placeholder='Введите сумму кредита' required />
             <label>Первоначальный взнос:</label>
             <input type="number" min='0' max='10000000' value={downPayment}
-              onChange={(e) => setDownPayment(e.target.value)} placeholder='Введите сумму первоначального взноса в рублях' required />
+              onChange={(e) => setDownPayment(e.target.value)} placeholder='Введите сумму первоначального взноса' required />
             <label>Срок кредита:
               <input type='number' className='termValue' min='0' max='100' value={loanTerm}
-                onChange={(e) => setLoanTerm(e.target.value)} placeholder='Введите срок кредита' required /> {years}
+                onChange={(e) => setLoanTerm(e.target.value)} placeholder='Введите срок' required /> {years}
             </label>
             <label>Процентная ставка:
               <input type="text" className='interestValue' defaultValue={interest_rate} disabled /> %
@@ -195,6 +189,7 @@ function Calculator({ setModalBox, setMessage, id, type, status, interest_rate, 
             <p className='error'>{errorFieldText}</p>
           </form>
           <div className='сalculation'>
+            <p className='resText'>Результат расчета:</p>
             <p>Ежемесячный платеж</p>
             <p className='result'>{new Intl.NumberFormat('ru-RU', {
               style: 'currency',
@@ -209,13 +204,6 @@ function Calculator({ setModalBox, setMessage, id, type, status, interest_rate, 
               currencyDisplay: 'narrowSymbol',
               maximumSignificantDigits: 5
             }).format(requiredIncome)}</p>
-            <p>Переплата</p>
-            <p className='result'>{new Intl.NumberFormat('ru-RU', {
-              style: 'currency',
-              currency: 'RUB',
-              currencyDisplay: 'narrowSymbol',
-              maximumSignificantDigits: 5
-            }).format(overPayment)}</p>
             <ShowBtnSave />
             <p className='error'>{errorSaveText}</p>
           </div>
@@ -227,14 +215,14 @@ function Calculator({ setModalBox, setMessage, id, type, status, interest_rate, 
       return (
         <div className="Calculator">
           <form>
-            <h1>{name}</h1>
+            <h2>{name}</h2>
             <label>Сумма вклада:</label>
             <input type="number" min='0' max='100000000' value={sum}
               onChange={(e) => setSum(e.target.value)} placeholder='Введите сумму вклада в рублях' required />
             <label>
               Срок вклада:
               <input type="number" className='termValue' min='0' max='100' value={loanTerm}
-                onChange={(e) => setLoanTerm(e.target.value)} placeholder='Введите срок вклада' required /> {months}
+                onChange={(e) => setLoanTerm(e.target.value)} placeholder='Введите срок' required /> {months}
             </label>
             <label>
               Процентная ставка:
@@ -244,7 +232,7 @@ function Calculator({ setModalBox, setMessage, id, type, status, interest_rate, 
             <p className='error'>{errorFieldText}</p>
           </form>
           <div className='сalculation'>
-            <p>Доход</p>
+            <p className='resText'>Результат расчета:</p>
             <p className='result'>{new Intl.NumberFormat('ru-RU', {
               style: 'currency',
               currency: 'RUB',

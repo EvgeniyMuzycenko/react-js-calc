@@ -65,7 +65,7 @@ function UserProfile({ token, setModalBox, setMessage }) {
           <СalculationBox key={item._id} id={item._id} sum={item.sum}
             downPayment={item.downPayment} interestRate={item.interestRate} loanTerm={item.loanTerm}
             monthlyPayment={item.monthlyPayment} requiredIncome={item.requiredIncome}
-            overPayment={item.overPayment} email={item.email} date={item.date} name={item.name} type={item.type}
+            email={item.email} date={item.date} name={item.name} type={item.type}
             incomeDeposit={item.incomeDeposit} capitalization={item.capitalization} token={token}
             setMessage={setMessage} setModalBox={setModalBox}
           />)}

@@ -1,5 +1,5 @@
 .Calculator {
-  width: auto;
+  width: 880px;
   height: auto;
   background-color: #ffffff;
   display: flex;
@@ -23,13 +23,13 @@
   text-align: left;
 }
 
-.Calculator h1 {
+.Calculator h2 {
   font-size: 28px;
   margin-bottom: 20px;
   color: #333;
 }
 
-.Calculator h1::before {
+.Calculator h2::before {
   content: "|";
   margin-right: 10px;
   color: #4caf50;
@@ -44,7 +44,7 @@
 .Calculator input {
   height: 50px;
   width: auto;
-  margin: 5px 5px;
+  margin: 10px 5px;
   border-radius: 10px;
   padding: 10px;
   font-size: 19px;
@@ -58,7 +58,7 @@
 }
 
 .Calculator .termValue {
-  width: 250px;
+  width: 180px;
   text-align: start;
 }
 
@@ -81,8 +81,8 @@
 }
 
 .Calculator p {
-  padding-top: 28px;
   font-size: 24px;
+  line-height: 40px;
   color: #555;
 }
 
@@ -96,7 +96,7 @@
   background-color: #fff;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  padding: 50px 30px;
+  padding: 10px 30px;
   display: flex;
   flex-direction: column;
 }
@@ -104,6 +104,13 @@
 .Calculator .result {
   color: #4caf50;
   font-weight: bold;
+  font-size: 40px;
+}
+
+.Calculator .resText {
+  font-size: 28px;
+  color: #333;
+  padding-top: 20px;
 }
 
 @media (max-width: 576px) {
@@ -137,6 +144,7 @@
 
   .Calculator input {
     width: 70%;
+    font-size: 15px;
   }
 
   .Calculator .defaultValue {

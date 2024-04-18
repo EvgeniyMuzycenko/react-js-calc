@@ -52,7 +52,7 @@
 .UserProfile .calculationBox {
   display: flex;
   align-items: center;
-  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 @media (max-width: 576px) {

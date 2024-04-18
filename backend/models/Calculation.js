@@ -25,10 +25,6 @@ const Calculation = new Schema({
     type: String
   },
 
-  overPayment: {
-    type: String
-  },
-
   email: {
     type: String
   },

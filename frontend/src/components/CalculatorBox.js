@@ -53,7 +53,7 @@ function CalculatorBox({ id, type, status, interest_rate, name, setMessage, setM
   if (jwtDecode(token).role === 'admin') {
     return (
       <div className="CalculatorBox">
-        <p><b>Название:</b> </p>
+        <p><b>Название:</b></p>
         <p className='desc'>{name}</p>
         <p><b>Тип:</b></p>
         <p className='desc'>{type}</p>
