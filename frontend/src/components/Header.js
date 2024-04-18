@@ -10,7 +10,7 @@ function Header({ setPage, setModalBox, token, setToken }) {
 
   return (
     <div className='Header'>
-      <div className='logo'><img src='./images/logo.png' alt='' /></div>
+      <div className='logo'><img src='./images/logo.png' alt='Логотип' /></div>
       <h1>Сервис онлайн калькуляторов</h1>
       <div className={`nav ${isOpen ? 'active' : ''}`}>
         <ul className='nav-list'>
