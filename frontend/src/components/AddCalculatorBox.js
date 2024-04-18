@@ -57,7 +57,7 @@ function AddCalculatorBox({ setModalBox, setMessage }) {
         <input id='type' placeholder='Тип калькулятора' type='text' required />
         <input id='interest_rate' type='number' step='0.1' min='0' max='100'
           placeholder='Процентная ставка' required />
-        <input id='status' type='number' min='0' max='1' placeholder='Статус калькулятора' required />
+        <input id='status' type='number' min='0' max='1' placeholder='0 - скрыт, 1 - отображается' required />
         <button id='send' onClick={() => AddCalculator()}>Добавить</button>
         <p className='error'>{errorText}</p>
         <FaX className='btn-close' id='send' onClick={() => setModalBox('none')} />

@@ -1,5 +1,5 @@
 .CalculatorBox {
-  width: auto;
+  width: 300px;
   height: auto;
   padding: 10px 20px;
   background-color: #ffffff;
@@ -29,7 +29,11 @@
   background-color: #3e8e41;
 }
 
-.CalculatorBox span {
+.CalculatorBox p {
+  margin: 3px;
+}
+
+.CalculatorBox .desc {
   color: #4caf50;
   font-weight: bold;
 }

@@ -53,10 +53,14 @@ function CalculatorBox({ id, type, status, interest_rate, name, setMessage, setM
   if (jwtDecode(token).role === 'admin') {
     return (
       <div className="CalculatorBox">
-        <p><b>Название:</b> <span>{name}</span></p>
-        <p><b>Тип:</b> <span>{type}</span></p>
-        <p><b>Ставка:</b> <span>{interest_rate} %</span></p>
-        <p><b>Статус:</b> <span>{isShow}</span></p>
+        <p><b>Название:</b> </p>
+        <p className='desc'>{name}</p>
+        <p><b>Тип:</b></p>
+        <p className='desc'>{type}</p>
+        <p><b>Ставка:</b></p>
+        <p className='desc'>{interest_rate} %</p>
+        <p><b>Статус:</b></p>
+        <p className='desc'>{isShow}</p>
         <p><button onClick={onShow}>Редактировать калькулятор</button></p>
         <p><button onClick={deleteCalculator}>Удалить калькулятор</button></p>
         <EditCalculatorBox isOpen={modalProdIsOpen} setMessage={setMessage}
