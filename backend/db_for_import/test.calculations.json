@@ -1,0 +1,74 @@
+[{
+  "_id": {
+    "$oid": "661fdaf2a9c5a7fdca08e16d"
+  },
+  "sum": "2000000",
+  "downPayment": "300000",
+  "interestRate": "3.5",
+  "loanTerm": "5",
+  "monthlyPayment": "30925.97",
+  "requiredIncome": "77314.92",
+  "overPayment": "155557.99",
+  "email": "grunt-88@mail.ru",
+  "date": "17.04.2024, 18:21:38",
+  "name": "Евгений",
+  "type": "кредит",
+  "incomeDeposit": "0",
+  "capitalization": "0",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "661fdb4aa9c5a7fdca08e176"
+  },
+  "sum": "50000",
+  "downPayment": "",
+  "interestRate": "5",
+  "loanTerm": "3",
+  "monthlyPayment": "0",
+  "requiredIncome": "0",
+  "overPayment": "0",
+  "email": "grunt@citydom.ru",
+  "date": "17.04.2024, 18:23:06",
+  "name": "Сергей",
+  "type": "вклад",
+  "incomeDeposit": "625.00",
+  "capitalization": "627.61",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66216d51aabfa38e6b464abb"
+  },
+  "sum": "200000",
+  "downPayment": "",
+  "interestRate": "13.5",
+  "loanTerm": "3",
+  "monthlyPayment": "0",
+  "requiredIncome": "0",
+  "email": "grunt-88@mail.ru",
+  "date": "18.04.2024, 22:58:25",
+  "name": "Евгений",
+  "type": "вклад",
+  "incomeDeposit": "6750.00",
+  "capitalization": "6826.22",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66216da4aabfa38e6b464acf"
+  },
+  "sum": "3500000",
+  "downPayment": "250000",
+  "interestRate": "9.6",
+  "loanTerm": "15",
+  "monthlyPayment": "34133.69",
+  "requiredIncome": "85334.22",
+  "email": "grunt@citydom.ru",
+  "date": "18.04.2024, 22:59:48",
+  "name": "Сергей",
+  "type": "кредит",
+  "incomeDeposit": "0",
+  "capitalization": "0",
+  "__v": 0
+}]
