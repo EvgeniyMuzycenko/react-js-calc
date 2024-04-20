@@ -54,7 +54,7 @@ function AddCalculatorBox({ setModalBox, setMessage }) {
       <form id='calc-form'>
         <p>Добавление калькулятора</p>
         <input id='name' placeholder='Название калькулятора' type='text' required />
-        <input id='type' placeholder='Тип калькулятора' type='text' required />
+        <input id='type' placeholder='Тип: вклад или кредит' type='text' required />
         <input id='interest_rate' type='number' step='0.1' min='0' max='100'
           placeholder='Процентная ставка' required />
         <input id='status' type='number' min='0' max='1' placeholder='0 - скрыт, 1 - отображается' required />

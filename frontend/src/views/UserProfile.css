@@ -55,7 +55,7 @@
   flex-wrap: wrap;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 1440px) {
   .UserProfile .calculatorBox,
   .calculationBox {
     display: flex;

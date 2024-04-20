@@ -1,6 +1,6 @@
 .CalculatorBox {
   width: 300px;
-  height: auto;
+  height: 375px;
   padding: 10px 20px;
   background-color: #ffffff;
   display: flex;

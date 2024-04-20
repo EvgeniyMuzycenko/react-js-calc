@@ -186,8 +186,12 @@ app.get('/calculations', async (req, res) => {
 
 app.post('/calculations/add', async (req, res) => {
   console.log(req.body)
-  const { sum, downPayment, interestRate, loanTerm, monthlyPayment, requiredIncome, email, date, name, type, incomeDeposit, capitalization } = req.body
-  const calculation = new Calculation({ sum, downPayment, interestRate, loanTerm, monthlyPayment, requiredIncome, email, date, name, type, incomeDeposit, capitalization })
+  const { sum, downPayment, interestRate, loanTerm, monthlyPayment, requiredIncome, email, date, name, type,
+    incomeDeposit, capitalization } = req.body
+  const calculation = new Calculation({
+    sum, downPayment, interestRate, loanTerm, monthlyPayment,
+    requiredIncome, email, date, name, type, incomeDeposit, capitalization
+  })
 
   try {
     await calculation.save()
@@ -208,7 +212,8 @@ app.post('/calculations/add', async (req, res) => {
 })
 
 //Отправка расчета на email
-function sendEmail({ email, subject, sum, downPayment, interestRate, loanTerm, monthlyPayment, requiredIncome, name, incomeDeposit, capitalization }) {
+function sendEmail({ email, subject, sum, downPayment, interestRate, loanTerm, monthlyPayment, requiredIncome,
+  name, incomeDeposit, capitalization, months, years }) {
   return new Promise((resolve, reject) => {
     var transporter = nodemailer.createTransport({
       service: "gmail",
@@ -230,7 +235,7 @@ function sendEmail({ email, subject, sum, downPayment, interestRate, loanTerm, m
       <p><b>Сумма кредита:</b> ${sum} руб.</p>
       <p><b>Первоначальный взнос:</b> ${downPayment} руб.</p>
       <p><b>Процентная ставка:</b> ${interestRate}%</p>
-      <p><b>Срок кредита:</b> ${loanTerm} лет</p>
+      <p><b>Срок кредита:</b> ${loanTerm} ${years}</p>
       <p><b>Ежемесячный платеж:</b> ${monthlyPayment} руб.</p>
       <p><b>Необходимый доход:</b> ${requiredIncome} руб.</p>
       `,
@@ -244,7 +249,7 @@ function sendEmail({ email, subject, sum, downPayment, interestRate, loanTerm, m
       <p><b>Имя пользователя:</b> ${name}</p>
       <p><b>Сумма вклада:</b> ${sum} руб.</p>
       <p><b>Процентная ставка:</b> ${interestRate}%</p>
-      <p><b>Срок вклада:</b> ${loanTerm} лет</p>
+      <p><b>Срок вклада:</b> ${loanTerm} ${months}</p>
       <p><b>Доход:</b> ${incomeDeposit} руб.</p>
       <p><b>Доход с капитализацией:</b> ${capitalization} руб.</p>
       `,

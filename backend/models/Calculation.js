@@ -47,6 +47,12 @@ const Calculation = new Schema({
 
   capitalization: {
     type: String
+  },
+  months: {
+    type: String
+  },
+  years: {
+    type: String
   }
 
 })
