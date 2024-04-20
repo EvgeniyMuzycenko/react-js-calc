@@ -22,7 +22,9 @@ function СalculationBox({ sum, downPayment, interestRate, loanTerm, monthlyPaym
           monthlyPayment,
           requiredIncome,
           date,
-          name
+          name,
+          months,
+          years
         },
       })
       .then(() => {
@@ -54,7 +56,9 @@ function СalculationBox({ sum, downPayment, interestRate, loanTerm, monthlyPaym
           incomeDeposit,
           capitalization,
           date,
-          name
+          name,
+          months,
+          years
         },
       })
       .then(() => {

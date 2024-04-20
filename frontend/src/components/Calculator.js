@@ -173,10 +173,10 @@ function Calculator({ setModalBox, setMessage, id, type, status, interest_rate, 
           <form>
             <span className='content'></span><h2>{name}</h2>
             <label>Сумма кредита:</label>
-            <input type="number" min='0' max='100000000' value={sum}
+            <input type="number" min='0' step='10000' max='100000000' value={sum}
               onChange={(e) => setSum(e.target.value)} placeholder='Введите сумму кредита' required />
             <label>Первоначальный взнос:</label>
-            <input type="number" min='0' max='10000000' value={downPayment}
+            <input type="number" min='0' step='10000' max='10000000' value={downPayment}
               onChange={(e) => setDownPayment(e.target.value)} placeholder='Введите сумму первоначального взноса' required />
             <label>Срок кредита:
               <input type='number' className='termValue' min='0' max='100' value={loanTerm}
@@ -217,7 +217,7 @@ function Calculator({ setModalBox, setMessage, id, type, status, interest_rate, 
           <form>
             <h2>{name}</h2>
             <label>Сумма вклада:</label>
-            <input type="number" min='0' max='100000000' value={sum}
+            <input type="number" min='0' step='10000' max='100000000' value={sum}
               onChange={(e) => setSum(e.target.value)} placeholder='Введите сумму вклада в рублях' required />
             <label>
               Срок вклада:
