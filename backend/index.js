@@ -259,9 +259,9 @@ function sendEmail({ email, subject, sum, downPayment, interestRate, loanTerm, m
     transporter.sendMail(mail_configs, function (error, info) {
       if (error) {
         console.log(error);
-        return reject({ message: `An error has occurred` });
+        return reject({ message: `Произошла ошибка` });
       }
-      return resolve({ message: "Email sent successfully" });
+      return resolve({ message: "Письмо отправлено успешно" });
     });
   });
 }
